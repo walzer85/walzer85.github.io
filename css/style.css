@@ -74,17 +74,19 @@ body {
 #chplogo2 {
   align-self: center;
   border: 10px solid white;
-  width: 600px;
+  max-width: 100%;
   height: auto;
   margin: 20px;
 }
 
 .pure-button {
+  font-family: 'Anton', sans-serif;
   background-color: #1f8dd6;
   font-size: 150%;
   color: white;
   padding: 0.5em 2em;
   border-radius: 5px;
+  margin: 12px;
 }
 
 a.pure-button-primary {
@@ -94,6 +96,7 @@ a.pure-button-primary {
   border-radius: 5px;
   font-size: 120%;
   text-decoration: none;
+  margin: 6px;
 }
 
 
