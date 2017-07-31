@@ -29,36 +29,46 @@
 
 body {
   background: #0066ff;
+  z-index: -1;
 }
 
-#about {
-  position: absolute;
+
+/* -- ABOUT STYLES --
+* This is the about section that appears on the page.
+*/
+
+#about-container {
+  background: #1f8dd6;
+  width: 100%;
+  height: 1000px;
+  border-radius: 5px;
+}
+
+.about {
+  /* absolute center .splash within .splash-container */
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  position: relative;
   top: 100px;
-  left: 25%;
-  right: 25%;
-  padding: 16px;
-  margin-top: 30px;
-  height: 800px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.head {
   font-family: 'Anton', sans-serif;
-}
-
-h2 {
-  position: relative;
-  font-size: 48px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  padding: 1em;
+  margin: 10px;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-#about a {
-  color: black;
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-  font-size: 48px;
-}
-
-#about a:hover {
-  color: grey;
 }
 
 #chplogo2 {
@@ -66,81 +76,154 @@ h2 {
   border: 10px solid white;
   width: 600px;
   height: auto;
+  margin: 20px;
 }
 
-#media {
-  position: absolute;
-  top: 950px;
-  left: 25%;
-  right: 25%;
-  padding: 16px;
-  margin-top: 30px;
-  height: 800px;
+.pure-button {
+  background-color: #1f8dd6;
+  font-size: 150%;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+}
+
+a.pure-button-primary {
   font-family: 'Anton', sans-serif;
+  background: white;
+  color: #1f8dd6;
+  border-radius: 5px;
+  font-size: 120%;
+  text-decoration: none;
 }
 
-#media {
-  position: absolute;
-  top: 1200px;
-  padding: .5vw;
-  font-size: 0;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  display: -webkit-box;
-  display: flex;
-}
 
-#media div {
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
-  width: 325px;
-  margin: .5vw;
-}
+/* -- GALLERY STYLES --
+* This is the gallery section that appears on the page.
+*/
 
-#media div img {
-  padding: 10px;
-  width: 100%;
+#gallery {
+  background: #1f8dd6;
+  width: auto;
   height: auto;
+  border-radius: 5px;
 }
 
-@media screen and (max-width: 400px) {
-  #media div {
-    margin: 0;
-  }
-  #media {
-    padding: 0;
-  }
+.w3-content {
+  max-width: 980px;
+  margin: auto;
 }
+
+.w3-display-container {
+  position: relative;
+}
+
+.w3-center {
+  text-align: center!important;
+}
+
+.w3-container {
+  padding: 0.01em 16px;
+}
+
+.w3-section {
+  margin-top: 16px!important;
+  margin-bottom: 16px!important;
+}
+
+.w3-large {
+  font-size: 18px!important;
+}
+
+.w3-text-white {
+  color: #fff!important;
+}
+
+.w3-display-bottommiddle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+}
+
+.w3-left {
+  float: left!important;
+}
+
+.w3-right {
+  float: right!important;
+}
+
+.w3-badge {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center border-radius: 50%;
+}
+
+.w3-border {
+  border: 1px solid #ccc!important;
+}
+
+.w3-transparent, .w3-hover-none:hover {
+  background-color: transparent!important;
+}
+
+.mySlides {
+  display: none;
+}
+
+.w3-left, .w3-right, .w3-badge {
+  cursor: pointer;
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+
+.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
 
 #products {
-  position: absolute;
-  top: 8100px;
-  left: 25%;
-  right: 25%;
-  padding: 16px;
-  margin-top: 30px;
-  height: 800px;
+  background: #1f8dd6;
   font-family: 'Anton', sans-serif;
-}
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  padding: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
+  text-align: center;
+  }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] {
-  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
-}
+
+/* -- CONTACT STYLES --
+* This is the contact section that appears on the page.
+*/
 
 #contact {
-  position: relative;
-  top: 10000px;
-  left: 25%;
-  right: 25%;
-  height: 800px;
+  background: #1f8dd6;
   font-family: 'Anton', sans-serif;
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 50px 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  padding: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
+  text-align: center;
+  }
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] {
+  font: 400 12px/16px 'Anton', sans-serif;
 }
 
 #contact h3 {
@@ -164,7 +247,7 @@ fieldset {
   width: 100%;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
   width: 100%;
   border: 1px solid #CCC;
   background: #FFF;
@@ -172,7 +255,7 @@ fieldset {
   padding: 10px;
 }
 
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact textarea:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
@@ -187,7 +270,7 @@ fieldset {
 
 #contact button[type="submit"] {
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   border: none;
   background: #0CF;
   color: #FFF;
