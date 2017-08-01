@@ -6,6 +6,7 @@
   width: 100%;
   height: 100px;
   z-index: 1;
+  border-bottom: 5px solid #1f8dd6;
 }
 
 #chplogo {
@@ -38,7 +39,7 @@ body {
 */
 
 #about-container {
-  background: #1f8dd6;
+  background: rgb(232, 232, 232);
   width: 100%;
   height: 1000px;
 }
@@ -63,7 +64,7 @@ body {
   font-weight: bold;
   color: white;
   padding: 1em;
-  margin: 10px;
+  /*margin: 10px;*/
   font-weight: 100;
   border-radius: 5px;
   line-height: 1em;
@@ -71,9 +72,8 @@ body {
 }
 
 #chplogo2 {
-  align-self: center;
-  border: 10px solid white;
-  max-width: 100%;
+  /*align-self: center;*/
+  max-width: 90%;
   height: auto;
   margin: 20px;
 }
@@ -98,19 +98,26 @@ a.pure-button-primary {
   margin: 12px;
 }
 
+#facebook {
+  text-align: center;
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
+
 
 /* -- GALLERY STYLES --
 * This is the gallery section that appears on the page.
 */
 
 #gallery {
-  background-color: rgb(232, 232, 232);
+  background-color: #1f8dd6;
   width: auto;
   height: auto;
 }
 
-body .w3-content {
-  width: 100%;
+.w3-content {
+  max-width: 60%;
   height: auto;
 }
 
@@ -205,7 +212,7 @@ body .w3-content {
 */
 
 #products {
-  background: #1f8dd6;
+  background: rgb(232, 232, 232);
   font-family: 'Anton', sans-serif;
   font-size: 40px;
   font-weight: bold;
@@ -215,7 +222,30 @@ body .w3-content {
   margin-bottom: 10px;
   font-weight: 100;
   line-height: 1em;
+  height: 550px;
   text-align: center;
+}
+
+.cajonContainer {
+  width: 100%;
+  padding: 0 16.7%;
+}
+
+.cajon  {
+    margin: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 225px;
+    height: auto;
+}
+
+.cajon:hover {
+    border: 1px solid #777;
+}
+
+div.cajon img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -224,7 +254,7 @@ body .w3-content {
 */
 
 #contact {
-  background-color: rgb(232, 232, 232);
+  background-color: #1f8dd6;
   font-family: 'Anton', sans-serif;
   font-size: 40px;
   font-weight: bold;

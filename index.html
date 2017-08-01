@@ -30,19 +30,18 @@
         <h1 class="head">Cat House Percussion</h1>
         <img id="chplogo2" src="media/chp_logo.jpg" alt="Cat House Percussion Logo">
         <p>
-          <a href="#gallery" class="pure-button pure-button-primary">See More</a><span>    </span><a href="https://www.facebook.com/cathousepercussion/" class="pure-button pure-button-primary">Our Facebook</a>
+          <a href="#gallery" class="pure-button pure-button-primary">See More</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/cathousepercussion/" alt=""><img id="facebook" src="media/fb-square.png" alt="Cat House Percussion Facebook"</img></a>
         </p>
       </div>
     </div>
     <section id="gallery">
       <h1 class="head">Gallery</h1>
       <div class="w3-content w3-display-container">
-        <img class="mySlides" src="media/cajon_1.jpg" alt="cajon_1">
-        <img class="mySlides" src="media/cajon_2.jpg" alt="cajon_1">
-        <img class="mySlides" src="media/cajon_3.jpg" alt="cajon_1">
         <img class="mySlides" src="media/cajon_4.jpg" alt="cajon_1">
-        <img class="mySlides" src="media/cajon_5.jpg" alt="cajon_1">
-        <img class="mySlides" src="media/cajon_6.jpg" alt="cajon_1">
+        <img class="mySlides" src="media/cajon_2.jpg" alt="cajon_1">
         <img class="mySlides" src="media/cajon_construct_1.jpg" alt="cajon_1">
         <img class="mySlides" src="media/cajon_construct_2.jpg" alt="cajon_1">
         <img class="mySlides" src="media/cajon_construct_3.jpg" alt="cajon_1">
@@ -51,57 +50,78 @@
         <img class="mySlides" src="media/chp_kyle_smile.jpg" alt="cajon_1">
         <img class="mySlides" src="media/chp_on_stage_1.jpg" alt="cajon_1">
         <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%">
-        <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-        <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
+          <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(6)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(7)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(8)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(9)"></span>
+          <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
 
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
 
-          function currentDiv(n) {
-            showDivs(slideIndex = n);
-          }
+            function currentDiv(n) {
+              showDivs(slideIndex = n);
+            }
 
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {
-              slideIndex = 1
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              if (n > x.length) {
+                slideIndex = 1
+              }
+              if (n < 1) {
+                slideIndex = x.length
+              }
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+              }
+              x[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " w3-white";
             }
-            if (n < 1) {
-              slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-white";
-          }
-        </script>
-      </div>
+          </script>
+        </div>
     </section>
     <section id="products">
-      <h2>Products<br><br>We are currently building this portion of the page.  Please contact us for purchasing information!</h2>
+      <h2>Products</h2>
+      <div class="cajonContainer">
+        <div class="cajon">
+          <a target="_blank" href="media/cajon_1.jpg">
+            <img src="media/cajon_1.jpg" alt="Cajon 1" width="30%" height="auto">
+          </a>
+        </div>
+        <div class="cajon">
+          <a target="_blank" href="media/cajon_3.jpg">
+            <img src="media/cajon_3.jpg" alt="Cajon 3" width="30%" height="auto">
+          </a>
+        </div>
+
+        <div class="cajon">
+          <a target="_blank" href="media/cajon_5.jpg">
+            <img src="media/cajon_5.jpg" alt="Cajon 5" width="30%" height="auto">
+          </a>
+        </div>
+
+        <div class="cajon">
+          <a target="_blank" href="media/cajon_6.jpg">
+            <img src="media/cajon_6.jpg" alt="Cajon 6" width="30%" height="auto">
+          </a>
+        </div>
+      </div>
+
     </section>
     <section id="contact">
       <h3>Quick Contact</h3>
