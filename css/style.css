@@ -61,8 +61,8 @@ body {
 .head {
   font-family: 'Anton', sans-serif;
   font-size: 40px;
-  font-weight: bold;
-  color: white;
+  font-weight: bolder;
+  color: black;
   padding: 1em;
   /*margin: 10px;*/
   font-weight: 100;
@@ -116,13 +116,20 @@ a.pure-button-primary {
   height: auto;
 }
 
-.w3-content {
-  max-width: 60%;
-  height: auto;
+.mySlides {
+  width: 60%;
+  display: none;
+  padding: 0 16.7%;
 }
 
+/*.w3-content {
+  max-width: 60%;
+  height: 60%;
+}*/
+
 .w3-content {
-  max-width: 980px;
+  width: 60%;
+  height: 60%;
   margin: auto;
   align-items: center;
 }
