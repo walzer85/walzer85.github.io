@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- MY STYLES -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style3.css">
+  <title>UCat House Landing Page</title>
+</head>
+
+<body>
+  <!-- BEFORE THE FOLD -->
+  <header>
+    <div class="navbar">
+      <img id="chplogo" src="media/chp_logo.jpg" alt="Cat House Percussion Logo" </div>
+      <div>
+        <a href="#contact">Contact</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/cathousepercussion/" alt=""><img id="facebook" src="media/fb-square.png" alt="Cat House Percussion Facebook"</img></a>
+      <div>
+  </header>
+  <main>
+    <!-- ABOUT SECTION -->
+      <section id="about">
+        <h1>CAT HOUSE PERCUSSION</h1>
+        <img src="media/chp_logo.jpg" alt="Cat House Percussion Logo">
+        <a href="#gallery">See Our Drums!</a>
+      </section>
+<!-- GALLERY SECTION -->
+      <section id="gallery">
+        <h1>GALLERY</h1>
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="media/cajon_4.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/cajon_2.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/cajon_construct_1.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/cajon_construct_2.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/cajon_construct_3.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/cajon_construct_4.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/chp_cat.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/chp_kyle_smile.jpg" alt="cajon_1">
+          <img class="mySlides" src="media/chp_on_stage_1.jpg" alt="cajon_1">
+          <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%">
+            <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(6)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(7)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(8)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(9)"></span>
+            <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
+
+              function plusDivs(n) {
+                showDivs(slideIndex += n);
+              }
+
+              function currentDiv(n) {
+                showDivs(slideIndex = n);
+              }
+
+              function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {
+                  slideIndex = 1
+                }
+                if (n < 1) {
+                  slideIndex = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-white";
+              }
+            </script>
+          </section>
+<!-- PRODUCTS SECTION -->
+        <section id="products">
+          <h1>PRODUCTS</h1>
+          <div class="cajonContainer">
+            <div class="cajon">
+              <a target="_blank" href="media/cajon_1.jpg">
+                <img src="media/cajon_1.jpg" alt="Cajon 1" width="30%" height="auto">
+              </a>
+            </div>
+            <div class="cajon">
+              <a target="_blank" href="media/cajon_3.jpg">
+                <img src="media/cajon_3.jpg" alt="Cajon 3" width="30%" height="auto">
+              </a>
+            </div>
+
+            <div class="cajon">
+              <a target="_blank" href="media/cajon_5.jpg">
+                <img src="media/cajon_5.jpg" alt="Cajon 5" width="30%" height="auto">
+              </a>
+            </div>
+            <div class="cajon">
+              <a target="_blank" href="media/cajon_6.jpg">
+                <img src="media/cajon_6.jpg" alt="Cajon 6" width="30%" height="auto">
+              </a>
+            </div>
+        </section>
+<!-- CONTACT SECTIONS -->
+      <section id="contact">
+        <h3>Quick Contact</h3>
+        <h4>Contact us today, and get reply with in 24 hours!</h4>
+        <fieldset>
+          <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Email Address" type="email" tabindex="2" required>
+        </fieldset>
+
+        <fieldset>
+          <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+        </form>
+        </div>
+      </section>
